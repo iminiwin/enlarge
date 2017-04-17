@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴css</title>
+    <style>
+        body { background: #333 }
+        .box div { width: 280px; font-size: 12px; font-family: "微软雅黑"; background: #fff; max-height: 0; overflow: hidden; transition: all .3s ease-in-out; padding: 0 10px; opacity: 0; }
+        a { display: block; width: 270px; background: #666; color: #FFF; height: 40px; line-height: 40px; font-size: 14px; text-decoration: none; font-family: "微软雅黑"; transition: all .5s ease; padding-left: 30px; border-bottom: 1px solid #333 }
+        .box { width: 300px; height: 400px; margin: auto; }
+        .box div:target { display: block; opacity: 1; padding: 10px; min-height: 100px; max-height:inherit;}
+    </style>
+</head>
+<body>
+<div class="box">
+    <a  href="#div1">
+        首页
+    </a>
+    <div id="div1"> 我们拥有10几年的高端企业网站定制服务，曾服务过：海尔、联想、北京电通、BIAD、雅虎、凤凰中心、民生银行等尽500多家高端企业用户。就是让您在半天时间内拥有一套高端企业网站！去除响应式，独立PC+手机的网站 </div>
+    <a   href="#div2">
+        案例
+    </a>
+    <div id="div2"> UEmo真正从企业用户角度出发，开发出自定义导航及页面、首页模块可显示/隐藏、拖拽排序、视差动效等功能，并同步生成手机站，也可绑定微信公众账号。UEmo产品研发阶段中，在零推广的情况下，已有上百家付费用户使用，并得到了极高的用户满意度。截止到目前，已有80余家企业伙伴希望得到该产品的代理权或战略合作。 </div id="#div3">
+    <a href="#div3">
+        功能
+    </a>
+    <div id="div3"> 预算低、周期短、需求高，怎么可能？UEmo让一切不可能变成可能！魔艺（UEmo）极速建站让企业或个人拥有：交互、设计及体验于一身的高逼格网站。后台操作使用说明 </div>
+</div>
+</body>
+</html>
