@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴css</title>
+    <style>
+        .tabs { display: flex; flex-wrap: wrap; position: relative; font-family:"微软雅黑"}
+        .tabs label { padding: 1rem 2rem; background: #90CAF9; font-weight: bold; margin-right: 0.2rem; cursor: pointer; transition: all .2s ease }
+        .tabs input[type="radio"] { opacity: 0; position: absolute; }
+        .tab { background: #fff; padding: 1rem; width: 400px; display: none; position:absolute; top:50px; }
+        .tabs input[type="radio"]:checked + label{ background:#fff;}
+        .tabs input[type="radio"]:checked + label + .tab{ display:block;}
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <input type="radio" name="tabs" id="tabone" checked="checked">
+    <label for="tabone">jQuery特效</label>
+    <div class="tab">
+        <h1>这里是jQuery特效内容列表</h1>
+        <p>这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表这里是jQuery特效内容列表</p>
+    </div>
+    <input type="radio" name="tabs" id="tabtwo" >
+    <label for="tabtwo">tab切换</label>
+    <div class="tab">
+        <p>这里是tab切换效果这里是tab切换效果这里是tab切换效果这里是tab切换效果</p>
+    </div>
+    <input type="radio" name="tabs" id="tabthree">
+    <label for="tabthree">菜单导航</label>
+    <div class="tab">
+        <h1>这里是菜单导航效果</h1>
+        <p>这里是菜单导航效果这里是菜单导航效果这里是菜单导航效果这里是菜单导航效果</p>
+    </div>
+</div>
+</body>
+</html>
