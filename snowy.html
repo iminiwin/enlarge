@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    body {
+        background: #333;
+    }
+
+    #snow {
+        background: none;
+        background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'),
+        url('http://www.wearewebstars.dk/codepen/img//s2.png'),
+        url('http://www.wearewebstars.dk/codepen/img//s3.png');
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        animation: snow 10s linear infinite;
+        -webkit-animation: snow 10s linear infinite;
+        -moz-animation: snow 10s linear infinite;
+        -ms-animation: snow 10s linear infinite;
+    }
+    @-webkit-keyframes snow{
+        0%{
+            background-position: 0px 0px ,0px 0px ,0px 0px;
+        }
+        50%{
+            background-position: 500px 500px,100px 200px,-100px 150px;
+        }
+        100%{
+            background-position: 400px 100px,200px 400px,100px 300px;
+        }
+    }
+    @-moz-keyframes snow{
+        0%{
+            background-position: 0px 0px ,0px 0px ,0px 0px;
+        }
+        50%{
+            background-position: 500px 500px,100px 200px,-100px 150px;
+        }
+        100%{
+            background-position: 400px 100px,200px 400px,100px 300px;
+        }
+    }
+    @-o-keyframes snow{
+        0%{
+            background-position: 0px 0px ,0px 0px ,0px 0px;
+        }
+        50%{
+            background-position: 500px 500px,100px 200px,-100px 150px;
+        }
+        100%{
+            background-position: 400px 100px,200px 400px,100px 300px;
+        }
+    }
+    @-ms-keyframes snow{
+        0%{
+            background-position: 0px 0px ,0px 0px ,0px 0px;
+        }
+        50%{
+            background-position: 500px 500px,100px 200px,-100px 150px;
+        }
+        100%{
+            background-position: 400px 100px,200px 400px,100px 300px;
+        }
+    }
+    @keyframes snow{
+        0%{
+            background-position: 0px 0px ,0px 0px ,0px 0px;
+        }
+        50%{
+            background-position: 500px 500px,100px 200px,-100px 150px;
+        }
+        100%{
+            background-position: 400px 100px,200px 400px,100px 300px;
+        }
+    }
+
+</style>
+
+<body>
+<div id="snow">
+</div>
+</body>
+</html>
