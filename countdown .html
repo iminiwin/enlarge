@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+</head>
+<body>
+<div class="time">
+    <span id="t_d">00天</span>
+    <span id="t_h">00时</span>
+    <span id="t_m">00分</span>
+    <span id="t_s">00秒</span>
+</div>
+<div id="btn">
+
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+    function GetRTime(){
+        var EndTime= new Date('2017/05/01 00:00:00');
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        var d=0;
+        var h=0;
+        var m=0;
+        var s=0;
+        if(t>=0){
+            d=Math.floor(t/1000/60/60/24);
+            h=Math.floor(t/1000/60/60%24);
+            m=Math.floor(t/1000/60%60);
+            s=Math.floor(t/1000%60);
+        }
+
+
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+    }
+    setInterval(GetRTime,0);
+
+
+    var x = 1,
+            interval;
+    window.onload = function() {
+        var d = new Date("1111/1/1,0:" + x + ":0");
+        interval = setInterval(function() {
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+            btn.innerHTML = m + ":" + s;
+            if (m == 0 && s == 0) {
+                clearInterval(interval);
+                return;
+            }
+            d.setSeconds(s - 1);
+        }, 1000);
+    }
+</script>
+
+</html>
